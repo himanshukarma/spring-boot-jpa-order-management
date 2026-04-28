@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.himanshu.order_management.entity.Address;
 import com.himanshu.order_management.entity.User;
 import com.himanshu.order_management.repository.UserRepository;
 
@@ -43,6 +44,12 @@ public class OrderManagementApplication implements CommandLineRunner {
 			user1.setName("Updated Name");
 		}
 
+		// -------------------------
+		Address address = new Address();
+		address.setCity("Amravati");
+		address.setStreet("Sai Nagar");
+		
+		user.setAddress(address);
 	}
 
 }
